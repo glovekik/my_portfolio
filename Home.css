@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('assets/fonts/Montserrat-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+@font-face {
+font-family: 'League Spartan';
+src: url('assets/fonts/LeagueSpartan-Regular.ttf') format('truetype');
+font-weight: 400;
+font-style: normal;
+}
+
+body {
+    font-family: 'Playfair Display', serif;
+    background-color: #FFFDF2;
+    font-size: 16px;
+    color: #4B2E2E;
+}
+.header {
+    display: flex; /* Use Flexbox for horizontal alignment */
+    justify-content: space-between; /* Space between title and nav items */
+    align-items: center; /* Vertically align items */
+    padding: 10px 10px; /* Add padding for spacing */
+    color: #4B2E2E; /* Text color for the title */
+  }
+  
+  /* Title styling */
+  .header .title {
+    font-size: 30px; /* Adjust the font size of the title */
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  /* Navigation bar styling */
+  .navbar {
+    display: flex; /* Align nav items horizontally */
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  /* Individual navigation links */
+  .navbar a {
+    color: #4B2E2E; /* Link text color */
+    text-decoration: none; /* Remove underline */
+    margin: 10px 10px; /* Spacing between links */
+    font-size: 18px; /* Font size */
+  }
+  
+  /* Hover effect for links */
+  .navbar a:hover {
+     border-bottom: 2px solid black;
+  }
+  
+  /* Active link styling */
+  .navbar a.active {
+    font-weight: bold;
+    color: #4B2E2E; /* Highlight active link */
+  }
+  
+  /* Main content styling */
+  .content {
+    padding: 20px;
+  }
+
+  .sideimg img{
+    float: right;
+    height: 732px;
+    width: 544px;
+    border-radius: 40px;
+  }
+
+  .leftdata{
+    color: #4B2E2E;
+    
+  }
+
+  .leftdata h1{
+    font-size: 80px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    text-align: left;
+  }
+
+
+  .leftdata a{
+    font-size: 15px;
+    font-family: 'League Spartan', sans-serif;
+  }
+
+ 
+
+  .leftdata p{
+    font-size: 20px;
+    font-family: 'League Spartan', sans-serif;
+    padding-bottom: 30px;
+  }
+
+  .leftdata a2{
+    position: relative;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+
+  .profiles{
+    position: relative;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+
+  .profiles a{
+    padding: 30px;
+  }
+
+  
+
+  .footer{
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: #4B2E2E;
+    text-align: center;
+    display: flex; /* Flexbox to center the content */
+  justify-content: center; /* Center the 'Contact Us' button */
+  padding: 10px 0; /* Padding on top and bottom */
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* Optional shadow for a raised effect */
+  }
+
+  .footer a{
+    text-decoration: none;
+    color: inherit;
+    font-size: 15px;
+  }
+
+  .cv-section {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.cv-button {
+    background-color: #4B2E2E;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.cv-button:hover {
+    background-color: #4B2E2E;
+}

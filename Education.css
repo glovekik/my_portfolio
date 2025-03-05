@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('assets/fonts/Montserrat-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'League Spartan';
+  src: url('assets/fonts/LeagueSpartan-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+    background-color: #FFFDF2;
+    color: #4B2E2E;
+    display: flex;
+    flex-direction: column; /* Stack the content vertically */
+    min-height: 100vh; /* Ensure the body takes full viewport height */
+    margin: 0; /* Remove default body margin */
+}
+
+.content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Auto-fit columns */
+    gap: 20px; /* Space between the grid items */
+    width: 90%; /* Full width */
+    padding: 40px;
+    flex-grow: 1; /* Allow content to grow and push footer down */
+}
+
+.education-entry {
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.education-entry h3{
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.education-entry p{
+    font-family: 'League Spartan', sans-serif;
+}
+
+.footer {
+    width: 100%;
+    color: #4B2E2E;
+    text-align: center;
+    display: flex; /* Flexbox to center the content */
+    justify-content: center; /* Center the 'Contact Us' link */
+    padding: 10px 0; /* Padding on top and bottom */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* Optional shadow for a raised effect */
+    position: relative;
+    bottom: 0; /* Ensure footer stays at the bottom */
+}
+
+.footer a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 15px;
+}

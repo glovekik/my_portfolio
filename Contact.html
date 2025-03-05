@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Gudivada's Portfolio</title>
+    <link rel="stylesheet" href="contact.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <h1 class="title">Gudivada's Portfolio</h1>
+        <nav class="navbar">
+            <a href="Home.html">Home</a>
+            <a href="Education.html">Education</a>
+            <a href="Skills.html">Skills</a>
+            <a href="Projects.html">Projects</a>
+            <a href="Certifications.html">Certifications</a>
+            <a href="Contact.html" class="active">Contact</a>
+        </nav>
+    </header>
+    
+    <section class="contact-section">
+        <h2>Hire Me!!!</h2>
+        <form id="contact-form">
+            <div class="input-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="input-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="input-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+    
+    <footer class="footer">
+        <p>&copy; 2025 Gudivada Lovekik. All Rights Reserved.</p>
+    </footer>
+    
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            let name = document.getElementById('name').value;
+            let email = document.getElementById('email').value;
+            let message = document.getElementById('message').value;
+            
+            let telegramBotToken = "7851433642:AAFJ8oEgweawBbH9hyes2HIelgc_RfTKz1Y";
+            let chatId = "5263185330";
+            let text = `New Contact Form Submission:\nName: ${name}\nEmail: ${email}\nMessage: ${message}`;
+            
+            let url = `https://api.telegram.org/bot${telegramBotToken}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(text)}`;
+            
+            fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.ok) {
+                        alert('Message sent successfully!');
+                        document.getElementById('contact-form').reset();
+                    } else {
+                        alert('Failed to send message.');
+                    }
+                })
+                .catch(error => console.error('Error:', error));
+        });
+    </script>
+</body>
+</html>
